@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    // Entrada de datos
+    int N;
+    cin >> N;
+    int juguetes[100];
+    int temp;
+    int sum = 0;
+    for(int i = 0; i < N;i++ ){
+        cin >> juguetes[i];
+    }
+    // Bubble sort
+    for(int i = 0; i < N; i++){
+        for(int j = 0; j < (N-i-1); j++){
+            if(juguetes[j] > juguetes[j+1]){
+                temp = juguetes [j];
+                juguetes[j] = juguetes[j+1];
+                juguetes[j+1] = temp;
+            }
+        }
+    }
+    cout << "Array sorteado : " << endl; 
+    for (int i = 0; i < N; i++){
+        cout <<  juguetes[i] << ","; 
+    }
+    cout << endl; 
+    cout << "Suma de todos los elementos: " << endl; 
+    for(int i = 0; i < N; i++){
+        sum = sum + juguetes[i]; 
+    }
+    for(int i = 0; i < 0; i++ ){
+        cout << sum; 
+    }
+    
+   return 0; 
+
+}
